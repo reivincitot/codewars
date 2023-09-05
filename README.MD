@@ -1,1 +1,1 @@
-Este archivo contiene los ejercicios de la pagina codwars que ire resolviendo
+Este archivo contiene los ejercicios de la pagina codewars que ire resolviendo
