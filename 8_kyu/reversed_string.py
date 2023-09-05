@@ -3,9 +3,9 @@
 # 'world'  =>  'dlrow'
 # 'word'   =>  'drow'
 def solution(string):
-    new_string = string.replace(string[0], string[-1])
-    print(new_string)
-    return new_string
+    reversed_string = "".join(reversed(string))
+    return(reversed_string)
+
 
 solution("world")
 solution("dos")
