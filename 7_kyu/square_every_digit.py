@@ -1,10 +1,50 @@
+def square_digits(num):
+    """
+    Esta función toma un número entero y cuadra cada uno de sus dígitos,
+    luego concatena los dígitos cuadrados y devuelve el resultado como un número entero.
 
-# Welcome. In this kata, you are asked to square every digit of a number and concatenate them.
+    Args:
+        num (int): El número entero de entrada que se procesará.
 
-# For example, if we run 9119 through the function, 811181 will come out, because 92 is 81 and 12 is 1. (81-1-1-81)
+    Returns:
+        int: El número resultante después de cuadrar los dígitos y concatenarlos.
 
-# Example #2: An input of 765 will/should return 493625 because 72 is 49, 62 is 36, and 52 is 25. (49-36-25)
+    Examples:
+        >>> square_digits(9119)
+        811181
+        >>> square_digits(0)
+        0
+    """
+    # Manejo de caso especial: si el número de entrada es 0, el resultado es 0.
+    if num == 0:
+        return 0
+    else:
+        # Convertir el número en una cadena de caracteres para poder recorrer sus dígitos.
+        str_numbers = str(num)
+        digits = []  # Inicializar una lista para almacenar los dígitos cuadrados.
+        
+        # Recorrer cada dígito en el número.
+        for character in str_numbers:
+            # Cuadrar el dígito y agregarlo a la lista de dígitos cuadrados.
+            digit = int(character) ** 2
+            digits.append(digit)
+        
+        # Unir los dígitos cuadrados en una cadena.
+        new_str_numbers = "".join(map(str, digits))
+        
+        # Eliminar los espacios en blanco de la cadena (si los hubiera).
+        new_str_numbers = new_str_numbers.replace(" ", "")
+        
+        # Convertir la cadena resultante en un número entero y devolverlo.
+        return int(new_str_numbers)
 
-# Note: The function accepts an integer and returns an integer.
 
-# Happy Coding!git 
+
+
+
+
+
+
+square_digits(234542345)
+square_digits(9119)
+square_digits(0)
